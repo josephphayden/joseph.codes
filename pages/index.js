@@ -9,7 +9,7 @@ const Home = () => (
         <div id='container'>
             <Intro>
                 <h1>Joseph Hayden</h1>
-                <p className='subheading'>
+                <p className={styles.subheading}>
                     Creative engineer passionate about tech for good,
                     <br />
                     currently CTO at School Space.
