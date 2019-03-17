@@ -6,7 +6,7 @@
   "author": "Joseph Hayden <josephphayden@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "dev": "next",
+    "dev": "next -p 80",
     "build": "next build",
     "start": "next start",
     "export": "next export"

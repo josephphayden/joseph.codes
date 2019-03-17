@@ -4,8 +4,10 @@ const fs = require('fs');
 module.exports = withSass({
     cssModules: true,
     exportPathMap: (defaultPathMap, { dev, dir, outDir, distDir, buildId }) => {
-        fs.copyFileSync(`${dir}/build/CNAME`, `${outDir}/CNAME`);
-        fs.copyFileSync(`${dir}/build/.nojekyll`, `${outDir}/.nojekyll`);
+        if (!dev) {
+            fs.copyFileSync(`${dir}/build/CNAME`, `${outDir}/CNAME`);
+            fs.copyFileSync(`${dir}/build/.nojekyll`, `${outDir}/.nojekyll`);
+        }
 
         return {
             '/': { page: '/' },
