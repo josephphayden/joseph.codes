@@ -1,11 +1,17 @@
 const withSass = require('@zeit/next-sass');
+const fs = require('fs');
 
 module.exports = withSass({
     cssModules: true,
-    exportPathMap: () => ({
-        '/': { page: '/' },
-        '/background': { page: '/background' },
-        '/services': { page: '/services' },
-        '/contact': { page: '/contact' }
-    })
+    exportPathMap: (defaultPathMap, { dev, dir, outDir, distDir, buildId }) => {
+        fs.copyFileSync(`${dir}/build/CNAME`, `${outDir}/CNAME`);
+        fs.copyFileSync(`${dir}/build/.nojekyll`, `${outDir}/.nojekyll`);
+
+        return {
+            '/': { page: '/' },
+            '/background': { page: '/background' },
+            '/services': { page: '/services' },
+            '/contact': { page: '/contact' }
+        };
+    }
 });
