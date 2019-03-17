@@ -21,6 +21,7 @@ const Header = ({ title }) => (
                 href='/static/favicons/apple-touch-icon.png'
             />
             <link rel='manifest' href='/static/manifest.json' />
+            <meta name='theme-color' content='#7afae3' />
             <meta
                 name='viewport'
                 content='initial-scale=1.0, width=device-width'
