@@ -1,0 +1,37 @@
+:root {
+    --spacing: 20px;
+    --section-height: calc(100vh - 200px);
+}
+
+section {
+    min-height: var(--section-height);
+    padding: calc(var(--spacing) * 4);
+    border-bottom: calc(var(--spacing) / 2) solid rgb(88, 88, 88);
+}
+
+section:last-child {
+    border-bottom: none;
+}
+
+br {
+    margin-bottom: calc(var(--spacing) / 2);
+}
+
+@media only screen and (max-width: 1023px) {
+    section {
+        padding: calc(var(--spacing) * 2);
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    section {
+        padding: var(--spacing);
+    }
+}
+
+@media only screen and (max-width: 540px) {
+    section {
+        padding: calc(var(--spacing) * 2) calc(var(--spacing) / 2);
+        min-height: calc(85vh - 80px);
+    }
+}

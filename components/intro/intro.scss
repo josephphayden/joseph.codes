@@ -1,0 +1,6 @@
+.intro {
+    background-color: var(--red);
+    border-color: var(--aqua);
+    padding-top: calc(var(--spacing) * 8);
+    min-height: calc(var(--section-height) - (var(--spacing) * 2));
+}

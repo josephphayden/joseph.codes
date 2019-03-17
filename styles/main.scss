@@ -1,0 +1,19 @@
+@import './typography';
+@import './layout';
+
+:root {
+    --red: #ea5c5a;
+    --orange: #ef8b3f;
+    --yellow: #f8dd74;
+    --aqua: #7afae3;
+    --light-blue: #a0d0f8;
+    --blue: #3e85da;
+    --navy: #002147;
+    --purple: #7a59e4;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    background-color: var(--red);
+}

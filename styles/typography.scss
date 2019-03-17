@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css?family=Arvo:400,700');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600');
+
+* {
+    font-family: 'Open Sans', sans-serif;
+    color: white;
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'Arvo', sans-serif;
+}
+
+h1 {
+    margin: var(--spacing) 0;
+    color: var(--aqua);
+    font-size: 100px;
+    letter-spacing: 2px;
+}
+
+h2 {
+    margin: calc(var(--spacing) / 2) 0;
+    font-size: 50px;
+    letter-spacing: 1px;
+}
+
+h3 {
+    margin: calc(var(--spacing) / 4) 0 0;
+    font-size: 18px;
+    letter-spacing: 0.5px;
+}
+
+a {
+    text-decoration: none;
+}
+
+@media only screen and (max-width: 767px) {
+    h1 {
+        font-size: 80px;
+    }
+
+    .subheading {
+        font-size: 20px;
+    }
+}
+
+@media only screen and (max-width: 540px) {
+    h1 {
+        font-size: 40px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    .subheading {
+        font-size: 15px;
+    }
+}
