@@ -1,4 +1,5 @@
 import Header from '../components/header/Header';
+import Intro from '../components/intro/Intro';
 import Experience from '../components/experience/Experience.js';
 
 import experiences from '../data/experiences';
@@ -9,14 +10,14 @@ const Background = () => (
     <>
         <Header title='Background' />
         <div className='container'>
-            <section id='intro'>
+            <Intro>
                 <h1>Background</h1>
                 <p class='subheading'>
                     Learn about my previous experience and progression
                     <br />
                     from engineering graduate to CTO.
                 </p>
-            </section>
+            </Intro>
             {experiences.map(experience => (
                 <Experience
                     key={experience.roleClass}
