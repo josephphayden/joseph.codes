@@ -1,6 +1,7 @@
 import Header from '../components/header/Header';
 import Intro from '../components/intro/Intro';
 import Experience from '../components/experience/Experience.js';
+import Scroller from '../components/scroller/Scroller.js';
 
 import experiences from '../data/experiences';
 
@@ -8,15 +9,22 @@ import styles from '../styles/main.scss';
 
 const Background = () => (
     <>
-        <Header title='Background' />
-        <div className='container'>
+        <Header title="Background" />
+        <div className={styles.background}>
             <Intro>
-                <h1>Background</h1>
-                <p class='subheading'>
-                    Learn about my previous experience and progression
+                <h1>My background</h1>
+                <p className={styles.subheading}>
+                    From engineering graduate to CTO, through a number of
+                    startup roles.
                     <br />
-                    from engineering graduate to CTO.
                 </p>
+                <p className={styles.subheading}>
+                    Leading small agile teams, designing elegant solutions to
+                    complex problems, and crafting beautiful user-centered
+                    products.
+                    <br />
+                </p>
+                <Scroller />
             </Intro>
             {experiences.map(experience => (
                 <Experience

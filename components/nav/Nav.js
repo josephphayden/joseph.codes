@@ -13,8 +13,8 @@ const Nav = ({ router: { pathname } }) => {
         <nav className={`${styles.nav} ${scrollY > 10 ? styles.floating : ''}`}>
             <ul>
                 {menuItems.map(({ name, path }) => (
-                    <li>
-                        <Link prefetch href={path}>
+                    <li key={`nav-link-${path}`}>
+                        <Link href={path}>
                             <a
                                 className={
                                     path === pathname ? styles.active : ''
